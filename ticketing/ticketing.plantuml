@@ -1,0 +1,222 @@
+@startuml
+
+title __TICKETING's Class Diagram__\n
+
+  namespace  {
+    class MavenWrapperDownloader {
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      class com.dan.ticketing.TicketingApplication {
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace configuration {
+        class com.dan.ticketing.configuration.SpringWebConfig {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace controller {
+        class com.dan.ticketing.controller.IndexController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace controller {
+        class com.dan.ticketing.controller.IssueController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace controller {
+        class com.dan.ticketing.controller.MachineController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace controller {
+        class com.dan.ticketing.controller.UserController {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace interceptor {
+        class com.dan.ticketing.interceptor.UserDataInterceptor {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace models {
+        class com.dan.ticketing.models.Greeting {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace models {
+        class com.dan.ticketing.models.Issue {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace models {
+        class com.dan.ticketing.models.Machine {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace models {
+        class com.dan.ticketing.models.User {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace repo {
+        interface com.dan.ticketing.repo.IssueRepo {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace repo {
+        interface com.dan.ticketing.repo.MachineRepo {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace repo {
+        interface com.dan.ticketing.repo.UserRepo {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace security {
+        class com.dan.ticketing.security.CustomUserDetailsService {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace service {
+        class com.dan.ticketing.service.IssueService {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace service {
+        class com.dan.ticketing.service.MachineService {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace service {
+        class com.dan.ticketing.service.UserService {
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace com.dan.ticketing {
+      namespace transfer {
+        class com.dan.ticketing.transfer.Statistics {
+        }
+      }
+    }
+  }
+  
+
+  com.dan.ticketing.configuration.SpringWebConfig .up.|> org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+  com.dan.ticketing.configuration.SpringWebConfig -up-|> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
+  com.dan.ticketing.configuration.SpringWebConfig o-- com.dan.ticketing.security.CustomUserDetailsService : customUserDetailsService
+  com.dan.ticketing.controller.IssueController o-- com.dan.ticketing.service.IssueService : issueService
+  com.dan.ticketing.controller.IssueController o-- com.dan.ticketing.service.MachineService : machineService
+  com.dan.ticketing.controller.MachineController o-- com.dan.ticketing.service.MachineService : machineService
+  com.dan.ticketing.controller.UserController o-- com.dan.ticketing.service.UserService : userService
+  com.dan.ticketing.interceptor.UserDataInterceptor -up-|> org.springframework.web.servlet.handler.HandlerInterceptorAdapter
+  com.dan.ticketing.models.Issue o-- com.dan.ticketing.models.Machine : machine
+  com.dan.ticketing.security.CustomUserDetailsService .up.|> org.springframework.security.core.userdetails.UserDetailsService
+  com.dan.ticketing.security.CustomUserDetailsService o-- com.dan.ticketing.service.UserService : userService
+  com.dan.ticketing.service.IssueService o-- com.dan.ticketing.repo.IssueRepo : issueRepo
+  com.dan.ticketing.service.MachineService o-- com.dan.ticketing.repo.MachineRepo : machineRepo
+  com.dan.ticketing.service.UserService o-- com.dan.ticketing.repo.UserRepo : userRepo
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

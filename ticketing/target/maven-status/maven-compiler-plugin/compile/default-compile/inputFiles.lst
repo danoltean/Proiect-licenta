@@ -1,0 +1,15 @@
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\models\Issue.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\service\UserService.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\controller\IndexController.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\models\Greeting.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\service\MachineService.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\configuration\SpringWebConfig.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\controller\UserController.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\TicketingApplication.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\controller\MachineController.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\models\User.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\repo\MachineRepo.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\security\CustomUserDetailsService.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\repo\UserRepo.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\interceptor\UserDataInterceptor.java
+C:\Users\Dan Oltean\Desktop\ticketing\src\main\java\com\dan\ticketing\models\Machine.java

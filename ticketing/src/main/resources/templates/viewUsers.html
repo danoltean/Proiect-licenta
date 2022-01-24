@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{base}">
+<div layout:fragment="content" id="content">
+    <head>
+        <title>View Users</title>
+    </head>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="table-hover col-md-8">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th> User Name</th>
+                    <th> First Name</th>
+                    <th> Last Name</th>
+                    <th> Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:if="${users.empty}">
+                    <td colspan="3"> No Users to display</td>
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td><span th:text="${user.username}"/></td>
+                    <td><span th:text="${user.firstname}"/></td>
+                    <td><span th:text="${user.lastname}"/></td>
+                    <td><span th:text="${user.role}"/></td>
+                    <td><a th:href="@{deleteUser/__${user.iduser}__}" class="btn btn-danger">X</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+</html>
